@@ -20,7 +20,7 @@ always applied on top of the frame layer. A layer typically has the following fi
 3. Properties: Valid operations on top of this particular layer
 For example, consider the following basic layer:
 
-js```
+```
 {
   "layers": [
     {
