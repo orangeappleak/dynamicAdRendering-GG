@@ -20,7 +20,7 @@ always applied on top of the frame layer. A layer typically has the following fi
 3. Properties: Valid operations on top of this particular layer
 For example, consider the following basic layer:
 
-```
+```js
 {
   "layers": [
     {
@@ -43,6 +43,8 @@ In the placement property, the x,y fields denote where the rendering has to star
 height and width define the size of this layer.
 Now if we introduce some property on this layer like color, the output should change
 accordingly. Consider the following input:
+
+```js
 {
 "layers":[
 {
@@ -66,11 +68,13 @@ accordingly. Consider the following input:
 }
 ]
 }
+```
 
 A frame layer defines the background on which a Text Layer is rendered. If there is no
 specification of the frame layer, the output is considered to be on a white background.
 
 Consider the following JSON to understand this layer:
+```js
 {
 "layers":[
 {
@@ -89,9 +93,11 @@ Consider the following JSON to understand this layer:
 ]
 
 }
+```
 
 On the Frame layer, the operations like color can be applied as shown below:
 
+```js
 {
 "layers":[
 {
@@ -115,6 +121,7 @@ On the Frame layer, the operations like color can be applied as shown below:
 }
 ]
 }
+```
 
 
 Your task is to render a Text ad (the text for the ad will be an input from the user) with a
