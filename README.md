@@ -47,26 +47,24 @@ accordingly. Consider the following input:
 ```js
 {
 "layers":[
-{
-"type":"text",
-"placement": [
-{
-"position":{
-"x":0,
-"y":0,
-"width":200,
-"height":200
-}
-}],
+  {
+    "type":"text",
+    "placement": [
+          {
+              "position":{
+                  "x":0,
+                  "y":0,
+                  "width":200,
+                  "height":200
+              }
+          }],
 
-"operations": [
-{
-"name":"color",
-"argument":"#D97F78"
-}
-]
-}
-]
+          "operations": [{
+              "name":"color",
+              "argument":"#D97F78"
+            }]
+          }
+      ]
 }
 ```
 
@@ -76,22 +74,21 @@ specification of the frame layer, the output is considered to be on a white back
 Consider the following JSON to understand this layer:
 ```js
 {
-"layers":[
-{
-"type":"frame",
-"path":"http://lab.greedygame.com/arpit-dev/unity-assignment/assets/wcc2_f2.png",
-"placement": [
-{
-"position":{
-"x":0,
-"y":0,
-"width":650,
-"height":230
-}
-}]
-}
-]
-
+  "layers":[
+    {
+      "type":"frame",
+      "path":"http://lab.greedygame.com/arpit-dev/unity-assignment/assets/wcc2_f2.png",
+      "placement": [
+       {
+        "position":{
+          "x":0,
+          "y":0,
+          "width":650,
+          "height":230
+        }
+        }]
+     }
+   ]
 }
 ```
 
@@ -99,27 +96,27 @@ On the Frame layer, the operations like color can be applied as shown below:
 
 ```js
 {
-"layers":[
-{
-"type":"frame",
-"path":"http://lab.greedygame.com/arpit-dev/unity-assignment/assets/wcc2_f2.png",
-"placement": [
-{
-"position":{
-"x":0,
-"y":0,
-"width":650,
-"height":230
-}
-}],
-"operations": [
-{
-"name":"color",
-"argument":"#77FF0000"
-}
-]
-}
-]
+  "layers":[
+   {
+      "type":"frame",
+      "path":"http://lab.greedygame.com/arpit-dev/unity-assignment/assets/wcc2_f2.png",
+      "placement": [
+        {
+          "position":{
+            "x":0,
+            "y":0,
+            "width":650,
+            "height":230
+          } 
+        }],
+        "operations": [
+          {
+            "name":"color",
+            "argument":"#77FF0000"
+          }
+        ]
+        }
+    ]
 }
 ```
 
