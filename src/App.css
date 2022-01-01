@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  width: auto;
+  height: auto;
+  overflow-x: hidden;
+  border: 10px solid rgba(255, 0,0, 50%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+section:nth-child(1){
+  padding:0 50px;
+  width: auto;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+  justify-content: left;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+section h1{
+  width: 80%;
+  height: auto;
+  font-family: 'scantype';
+  font-size: 200px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+
+section h2{
+  font-family: 'scantype';
+  font-size: 100px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+
+#dynamic-ad{
+  height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#layer-types{
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  width: 80vh;
+  text-align: center;
+  align-items: center;
+}
+
+#layer-types #layer-buttons{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  cursor: pointer;
+}
+
+#layer-types h1{
+  margin: 5px 0;
+  font-size: 30px;
+  width: 100%;
+}
+
+#layer-types .layer-button{
+  border-radius: 10px;
+  border: 2px solid red;
+  width: 40%;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  margin: 20px 20px;
+  transform: scale(1) translate(0,0);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.App-link {
-  color: #61dafb;
+#layer-types .layer-button:hover{
+  transform: scale(1) translate(0, -20%);
+  border-radius: 90px;
+  box-shadow: 0px 25px 15px 1px rgba(0, 0, 0, 0.20);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+  font-family: ronda;
+  src: url(./resources/fonts/RondalBold-2O4lW.otf);
+}
+
+@font-face{
+  font-family: mandan;
+  src: url(./resources/fonts/MandanDemo-nRLvV.ttf);
+}
+
+@font-face {
+  font-family: scantype;
+  src: url(./resources/fonts/ScantypePersonalUse-v51A.ttf);
+}
+
+@font-face {
+  font-family: aa;
+  src: url(./resources/fonts/MuhaquRegularpersonaluse-Z4DK.ttf);
 }
