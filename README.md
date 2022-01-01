@@ -1,130 +1,70 @@
-# dynamicAdRendering-GG
-An assignment for GreedyGame
+# Getting Started with Create React App
 
-# Dynamic Ad Rendering
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Advertisers are constantly looking at ways of capturing the attention of the user. In order
-to do this, ads can be made dynamically from some basic elements. With the set of
-instructions defined below, you are tasked with creating dynamic ads based on a JSON file
-input.
+## Available Scripts
 
-# Instructions
-All elements of an ad are bound together with layers. There are two types of layers for this
-assignment:
-1. Text Layer
-2. Frame Layer
-Every layer is applied on top of another with a fixed priority. In this case, the Text Layer is
-always applied on top of the frame layer. A layer typically has the following fields:
-1. Type: can be “text” or “frame”
-2. Placement: Where is this layer exactly placed to create an ad on the plane
-3. Properties: Valid operations on top of this particular layer
-For example, consider the following basic layer:
+In the project directory, you can run:
 
-```js
-{
-  "layers": [
-    {
-      "type":"text",
-      "placement":[
-        {
-          "position":{
-            "x":0,
-            "y":0,
-            "width":200,
-            "height":200
-            }
-         }]
-     }
-   ]
-}       
-```
+### `npm start`
 
-In the placement property, the x,y fields denote where the rendering has to start. The
-height and width define the size of this layer.
-Now if we introduce some property on this layer like color, the output should change
-accordingly. Consider the following input:
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-```js
-{
-"layers":[
-  {
-    "type":"text",
-    "placement": [
-          {
-              "position":{
-                  "x":0,
-                  "y":0,
-                  "width":200,
-                  "height":200
-              }
-          }],
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-          "operations": [{
-              "name":"color",
-              "argument":"#D97F78"
-            }]
-          }
-      ]
-}
-```
+### `npm test`
 
-A frame layer defines the background on which a Text Layer is rendered. If there is no
-specification of the frame layer, the output is considered to be on a white background.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Consider the following JSON to understand this layer:
-```js
-{
-  "layers":[
-    {
-      "type":"frame",
-      "path":"http://lab.greedygame.com/arpit-dev/unity-assignment/assets/wcc2_f2.png",
-      "placement": [
-       {
-        "position":{
-          "x":0,
-          "y":0,
-          "width":650,
-          "height":230
-        }
-        }]
-     }
-   ]
-}
-```
+### `npm run build`
 
-On the Frame layer, the operations like color can be applied as shown below:
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-```js
-{
-  "layers":[
-   {
-      "type":"frame",
-      "path":"http://lab.greedygame.com/arpit-dev/unity-assignment/assets/wcc2_f2.png",
-      "placement": [
-        {
-          "position":{
-            "x":0,
-            "y":0,
-            "width":650,
-            "height":230
-          } 
-        }],
-        "operations": [
-          {
-            "name":"color",
-            "argument":"#77FF0000"
-          }
-        ]
-        }
-    ]
-}
-```
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Your task is to render a Text ad (the text for the ad will be an input from the user) with a
-JSON template consisting of the layers and properties mentioned above.
+### `npm run eject`
 
-Your solution should be able to handle multiple layer renderings (not more than one layer
-of each type i.e only one text layer, one frame layer). Take care of conditions which would
-make the template unrenderable (what happens when the image path in the frame layer is
-not a valid image?). In such conditions, you have to declare the template as “invalid”.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
