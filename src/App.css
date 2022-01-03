@@ -10,22 +10,49 @@ body{
   border: 10px solid rgba(255, 0,0, 50%);
 }
 
-section:nth-child(1){
-  padding:0 50px;
+section{
+  padding: 0 50px;
+  margin-bottom: 100px;
+}
+
+#home-page{
   width: auto;
   align-items: center;
   height: 100vh;
   display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  font-size: 90px;
   justify-content: left;
 }
 
 section h1{
-  width: 80%;
-  height: auto;
   font-family: 'scantype';
-  font-size: 200px;
   font-weight: lighter;
   letter-spacing: 2px;
+}
+
+#home-page-content{
+  flex: 1.2;
+  margin: 0 100px 0 0;
+  width: 100%;
+  height: auto;
+  font-family: 'scantype';
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+
+#home-page-content p{
+  font-size: 30px;
+}
+
+#image-block{
+  flex: 1;
+  overflow: hidden;
+}
+
+#image-block img{
+  width: 100%;
 }
 
 section h2{
@@ -35,54 +62,202 @@ section h2{
   letter-spacing: 2px;
 }
 
-#dynamic-ad{
-  height: 100vh;
+#layer_input{
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 20px;
 }
 
-#layer-types{
-  margin: 20px 0;
+#layer-buttons{
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  width: 80vh;
+  justify-content: space-evenly;
   text-align: center;
-  align-items: center;
 }
 
-#layer-types #layer-buttons{
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
+.layer-button{
+  text-align: center;
+  width: 40%;
+  border: 2px solid red;
+  padding: 10px 20px;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.24);
+  transform: translate(0%, 0%);
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   cursor: pointer;
 }
 
-#layer-types h1{
-  margin: 5px 0;
-  font-size: 30px;
-  width: 100%;
+.layer-button:hover{
+  transform: translate(0%, -10%);
+  box-shadow: 0 10px 20px 1px rgba(0,0,0,0.20);
 }
 
-#layer-types .layer-button{
-  border-radius: 10px;
-  border: 2px solid red;
-  width: 40%;
+#layer-options{
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#layer-options-button{
+  padding: 10px;
+  width: 50%;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0.04);
-  text-align: center;
-  margin: 20px 20px;
-  transform: scale(1) translate(0,0);
-  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  margin: 20px;
+  overflow: hidden;
+  border: 2px solid red;
+  transform: translate(0%,0%) scale(0.9);
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
 }
 
-#layer-types .layer-button:hover{
-  transform: scale(1) translate(0, -20%);
-  border-radius: 90px;
-  box-shadow: 0px 25px 15px 1px rgba(0, 0, 0, 0.20);
+#layer-options-button h1{
+  z-index: 2;
+  color: black;
+}
+
+#circle-hover{
+  transform: translate(0%,100%);
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  border-radius: 1000px;
+  width: 100%;
+  height: 900%;
+  background-color: red;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#layer-options-button:hover{
+  transform: translate(0%,0%) scale(1);
+
+}
+
+#layer-options-button:hover #circle-hover{
+  transform: translate(0%,0%);
+}
+
+#layer-options-box{
+  visibility: collapse;
+  overflow-y: scroll;
+  width: 100%;
+  height: 0vh;
+  border: 2px solid red;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#layer-options-box.show{
+  visibility: visible;
+  height: 50vh;
+}
+
+#layer-types{
+  flex: 1;
+}
+
+#layer-types{
+  text-align: center;
+}
+
+#layers-json{
+  margin: 50px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#layers-json div{
+  margin: 0 50px;
+}
+
+#layers-json h2{
+  font-size: 40px;
+}
+
+#flex-layers-ad{
+  flex: 1;
+}
+
+#flex-ad{
+  flex: 1;
+}
+
+#dynamic-ad-space{
+  border: 2px solid red;
+  width: 100%;
+  margin-left: 0 !important;
+  padding: 0;
+}
+
+#json-code-block{
+  padding: 10px 30px;
+  height: 50vh;
+  background-color: black;
+  line-height: 1.2;
+  overflow-y: scroll;
+}
+
+#json-code-block p{
+  color: white;
+}
+
+#json-code-block::-webkit-scrollbar{
+  width: 5px;
+  background-color: black;
+}
+
+#json-code-block::-webkit-scrollbar-thumb{
+  background-color: white;
+}
+
+body #main-ad-division{
+  margin: 0;
+  border: 10px solid red;
+  border-radius: 20px;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+#main-ad-division .frame{
+  display: flex;
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#main-ad-division .frame #image-color{
+  margin: 0;
+  position: absolute;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+#main-ad-division .frame img{
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+
+#main-ad-division .text{
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+#main-ad-division .text h1{
+  transition: all 0.5s ease-in-out;
 }
 
 @font-face {

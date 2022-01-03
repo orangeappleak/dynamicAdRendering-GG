@@ -1,4 +1,31 @@
 {
-    "layers":[
-    ]
+    "layers":[],
+    "guidelines for input": {
+        "text-layer-input": {
+            "type": "once chosen cant be changed",
+            "text": "the text that you want to display",
+            "placement": {
+                "x": "in %, the position on x-axis",
+                "y": "in %, the position on y axis"
+            },
+            "operations": {
+                "color": "color of the text"
+            }
+        },
+
+        "frame-layer-input": {
+            "type": "once chosen cant be changed",
+            "path": "url of the image that you want to use",
+            "placement": {
+                "x": "in %, the position on x-axis",
+                "y": "in %, the position on y axis",
+                "width": "in % and px, width of the image",
+                "height": "in % and px, height of the image"
+            },
+            "operations": {
+                "color": "background color for the frame value",
+                "font-size": "font-size in px"
+            }
+        }
+    }
 }
