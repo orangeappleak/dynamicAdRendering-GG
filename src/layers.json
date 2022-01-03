@@ -1,15 +1,47 @@
 {
     "layers":[],
+    
+    "example inputs":{
+        "text-layer-example": {
+            "type": "text",
+            "text": "hello world",
+            "placement": {
+                "x": 20,
+                "y": 50
+            },
+            "operations": {
+                "color": "red",
+                "fontSize": "100px"
+            }
+        },
+
+        "frame-layer-example":{
+            "type": "frame",
+            "path": "https://media.istockphoto.com/photos/id",
+            "placement": {
+                "x": 50,
+                "y": 50,
+                "width": "50%",
+                "height": "20%"
+            },
+            "operations":{
+                "bgColor": "grey"
+            }
+        }
+        
+    },
+    
     "guidelines for input": {
         "text-layer-input": {
             "type": "once chosen cant be changed",
             "text": "the text that you want to display",
             "placement": {
-                "x": "in %, the position on x-axis",
-                "y": "in %, the position on y axis"
+                "x": "in %, the position on x-axis default to 0",
+                "y": "in %, the position on y axis default to 0"
             },
             "operations": {
-                "color": "color of the text"
+                "color": "color of the text default to black",
+                "fontSize": "font size of the text, default to 22px"
             }
         },
 
@@ -17,14 +49,13 @@
             "type": "once chosen cant be changed",
             "path": "url of the image that you want to use",
             "placement": {
-                "x": "in %, the position on x-axis",
+                "x": "in %, the position on x-axis example inputs: 50, 60, 100",
                 "y": "in %, the position on y axis",
                 "width": "in % and px, width of the image",
                 "height": "in % and px, height of the image"
             },
             "operations": {
-                "color": "background color for the frame value",
-                "font-size": "font-size in px"
+                "bgColor": "background color for the frame layer"
             }
         }
     }
